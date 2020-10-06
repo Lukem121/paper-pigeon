@@ -40,65 +40,39 @@ export class Slack {
         this.xhr.open("POST", this.webhook, true);
         // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
-            blocks: [
-                {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: "*Success* 🥳"
-                    }
-                },
-                {
-                    type: "divider"
-                },
-                {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: msg
-                    }
-                }
-            ]
+            
+            type: "section",
+            text: {
+                type: "mrkdwn",
+                text: "*Success* 🥳: " + msg
+            }
+            
         }));
     };
     error(msg) {
         this.xhr.open("POST", this.webhook, true);
         // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
-            blocks: [
-                {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: "*Error* ❌"
-                    }
-                },
-                {
-                    type: "divider"
-                },
-                {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: msg
-                    }
-                }
-            ]
+                
+            type: "section",
+            text: {
+                type: "mrkdwn",
+                text: "*Error* 😢: " + msg
+            }
+                
         }));
     };
     message(msg) {
         this.xhr.open("POST", this.webhook, true);
         // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
-            blocks: [
-                {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: msg
-                    }
-                }
-            ]
+                
+            type: "section",
+            text: {
+                type: "mrkdwn",
+                text: msg
+            }
+                
         }));
     };
 }
