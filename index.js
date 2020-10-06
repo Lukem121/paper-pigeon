@@ -1,4 +1,4 @@
-module.exports = class Discord {
+let discord = class Discord {
     constructor(webhook) {
         this.webhook = webhook;
         let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
@@ -35,3 +35,5 @@ module.exports = class Discord {
         }));
     };
 }
+
+module.exports = discord;
