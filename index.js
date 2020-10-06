@@ -40,39 +40,45 @@ export class Slack {
         this.xhr.open("POST", this.webhook, true);
         // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
-            
-            type: "section",
-            text: {
-                type: "mrkdwn",
-                text: "*Success* 🥳: " + msg
-            }
-            
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: "*Success* 🥳: " + msg
+                    }
+                }
+            ]
         }));
     };
     error(msg) {
         this.xhr.open("POST", this.webhook, true);
         // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
-                
-            type: "section",
-            text: {
-                type: "mrkdwn",
-                text: "*Error* 😢: " + msg
-            }
-                
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: "*Error* 😢: " + msg
+                    }
+                }
+            ]
         }));
     };
     message(msg) {
         this.xhr.open("POST", this.webhook, true);
         // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
-                
-            type: "section",
-            text: {
-                type: "mrkdwn",
-                text: msg
-            }
-                
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: msg
+                    }
+                }
+            ]
         }));
     };
 }
