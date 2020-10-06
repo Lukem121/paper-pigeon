@@ -38,7 +38,7 @@ export class Slack {
     }
     success(msg) {
         this.xhr.open("POST", this.webhook, true);
-        this.xhr.setRequestHeader('Content-Type', 'application/json');
+        // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
             blocks: [
                 {
@@ -63,7 +63,7 @@ export class Slack {
     };
     error(msg) {
         this.xhr.open("POST", this.webhook, true);
-        this.xhr.setRequestHeader('Content-Type', 'application/json');
+        // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
             blocks: [
                 {
@@ -88,7 +88,7 @@ export class Slack {
     };
     message(msg) {
         this.xhr.open("POST", this.webhook, true);
-        this.xhr.setRequestHeader('Content-Type', 'application/json');
+        // this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
             blocks: [
                 {
