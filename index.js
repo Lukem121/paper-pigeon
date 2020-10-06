@@ -1,4 +1,4 @@
-export default class Discord {
+module.exports = class Discord {
     constructor(webhook) {
       this.webhook = webhook;
       this.xhr = new XMLHttpRequest();
