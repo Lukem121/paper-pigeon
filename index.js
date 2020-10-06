@@ -3,7 +3,7 @@ export class Discord {
       this.webhook = webhook;
       this.xhr = new XMLHttpRequest();
     }
-  
+    //Add more options
     success(msg) {
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
