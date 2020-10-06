@@ -12,7 +12,7 @@ send.success("Data loaded from API");
 send.error("Failed to load resource");
 ```
 # Get Discord Webhook URL
-Open Discord -> Integrations -> Create Webhook -> Copy Webhook URL.
+Open Discord -> Integrations -> Create Webhook -> Copy Webhook URL
 
 # Demo
 [Live Demo](https://paper-pigeon-demo.vercel.app/)
