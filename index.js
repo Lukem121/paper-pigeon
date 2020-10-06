@@ -3,7 +3,6 @@ export class Discord {
       this.webhook = webhook;
       this.xhr = new XMLHttpRequest();
     }
-    //Add more options
     success(msg) {
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
@@ -29,6 +28,77 @@ export class Discord {
             content: msg,
             username: "Pigeon",
             avatar_url:"https://user-images.githubusercontent.com/30378184/95204787-7742d400-07dc-11eb-9271-2e5a92a34fcc.jpg"
+        }));
+    };
+}
+export class Slack {
+    constructor(webhook) {
+      this.webhook = webhook;
+      this.xhr = new XMLHttpRequest();
+    }
+    success(msg) {
+        this.xhr.open("POST", this.webhook, true);
+        this.xhr.setRequestHeader('Content-Type', 'application/json');
+        this.xhr.send(JSON.stringify({
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: "*Success* 🥳"
+                    }
+                },
+                {
+                    type: "divider"
+                },
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: msg
+                    }
+                }
+            ]
+        }));
+    };
+    error(msg) {
+        this.xhr.open("POST", this.webhook, true);
+        this.xhr.setRequestHeader('Content-Type', 'application/json');
+        this.xhr.send(JSON.stringify({
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: "*Error* ❌"
+                    }
+                },
+                {
+                    type: "divider"
+                },
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: msg
+                    }
+                }
+            ]
+        }));
+    };
+    message(msg) {
+        this.xhr.open("POST", this.webhook, true);
+        this.xhr.setRequestHeader('Content-Type', 'application/json');
+        this.xhr.send(JSON.stringify({
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: msg
+                    }
+                }
+            ]
         }));
     };
 }
