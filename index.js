@@ -2,10 +2,10 @@ module.exports = class Discord {
     constructor(webhook) {
         this.webhook = webhook;
         let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-        this.xhr = new XMLHttpRequest();
     }
   
     success(msg) {
+        this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
@@ -15,6 +15,7 @@ module.exports = class Discord {
         }));
     };
     error(msg) {
+        this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
@@ -24,6 +25,7 @@ module.exports = class Discord {
         }));
     };
     message(msg) {
+        this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({

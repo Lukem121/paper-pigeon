@@ -4,7 +4,7 @@ npm install paper-pigeon --save
 ```
 # Usage
 ```js
-import Discord from './index.js';
+const Discord = require('paper-pigeon');
 
 const send = new Discord("WEBHOOK_URL");
 send.message("Starting server!");
