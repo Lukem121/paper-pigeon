@@ -1,0 +1,25 @@
+{
+  "name": "paper-pigeon",
+  "version": "1.0.0",
+  "description": "This is a lightweight library to send notifications to discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lukem121/paper-pigeon.git"
+  },
+  "keywords": [
+    "discord",
+    "javascript",
+    "paper",
+    "pigeon"
+  ],
+  "author": "Lukem121",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lukem121/paper-pigeon/issues"
+  },
+  "homepage": "https://github.com/Lukem121/paper-pigeon#readme"
+}
