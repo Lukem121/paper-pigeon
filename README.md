@@ -1,10 +1,10 @@
 # Installation
 ```console
-npm install paper-pigeon --save
+npm i paper-pigeon
 ```
 # Usage
 ```js
-const Discord = require('paper-pigeon');
+import { Discord } from 'paper-pigeon';
 
 const send = new Discord("WEBHOOK_URL");
 send.message("Starting server!");

@@ -1,11 +1,10 @@
-let discord = class Discord {
+export class Discord {
     constructor(webhook) {
-        this.webhook = webhook;
-        let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+      this.webhook = webhook;
+      this.xhr = new XMLHttpRequest();
     }
   
     success(msg) {
-        this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
@@ -15,7 +14,6 @@ let discord = class Discord {
         }));
     };
     error(msg) {
-        this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
@@ -25,7 +23,6 @@ let discord = class Discord {
         }));
     };
     message(msg) {
-        this.xhr = new XMLHttpRequest();
         this.xhr.open("POST", this.webhook, true);
         this.xhr.setRequestHeader('Content-Type', 'application/json');
         this.xhr.send(JSON.stringify({
@@ -35,5 +32,3 @@ let discord = class Discord {
         }));
     };
 }
-
-module.exports = discord;
