@@ -1,3 +1,4 @@
+![Logo](https://user-images.githubusercontent.com/30378184/95273486-1f878580-083b-11eb-8eb8-6c69e6fd64f7.jpg)
 # Installation
 ```console
 npm i paper-pigeon
